@@ -32,7 +32,7 @@ function Header({ cart }) {
                     <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
                     <Link to="/signin" onClick={() => setMenuOpen(false)}>Sign In</Link>
                     <Link to="/dashboard" onClick={() => setMenuOpen(false)}>Dashboard</Link>
-                    <Link to="/cart" onClick={() => setMenuOpen(false)}></Link>
+                    <Link to="/cart" onClick={() => setMenuOpen(false)}>Cart</Link>
                 </nav>
             )}
         </header>
