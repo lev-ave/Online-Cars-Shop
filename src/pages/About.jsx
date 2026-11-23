@@ -1,9 +1,9 @@
 import Header from "../components/Header";
 
-function About({ cartLength }) {
+function About() {
   return (
     <div className="bg-[#3e0000] min-h-screen text-white">
-      <Header cart={cartLength} />
+      <Header />
       <div className="flex flex-col items-center justify-center min-h-[80vh] px-6">
         <h1 className="text-4xl font-bold mb-4"> About Us </h1>
         <p className="text-lg text-center max-w-2xl">

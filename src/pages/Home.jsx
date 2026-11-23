@@ -4,11 +4,11 @@ import Hero from "../components/Hero";
 import ProductList from "../components/ProductList";
 import ContactForm from "../components/ContactForm";
 
-function Home({addToCart, cartLength }) {
+function Home({addToCart}) {
 
   return (
     <div className="bg-[#3e0000] min-h-screen text-white">
-        <Header cart={cartLength} />
+        <Header />
         <Hero />
         <ProductList onAddToCart={addToCart} />
         <ContactForm />

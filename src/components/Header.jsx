@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
-function Header({ cart }) {
+function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const { cartCount } = useContext(CartContext);
 
     return (
         <header className="bg-[#3e0000] text-white">

@@ -1,7 +1,10 @@
 import {Link, useLocation} from 'react-router'
+import { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
 
-function ProductCard ({product, onAddToCart, removeFromCart}) {
+function ProductCard ({product}) {
     const location = useLocation()
+    const { addToCart, removeFromCart } = useContext(CartContext);
     const isCartPage = location.pathname === '/cart'
     return(
         <Link to={`/products/${product.id}`}>

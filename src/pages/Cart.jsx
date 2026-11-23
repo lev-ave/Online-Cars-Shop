@@ -1,8 +1,11 @@
 import ProductCard from "../components/ProductCard"
 import {Link} from 'react-router-dom'
 import Header from "../components/Header";
+import { CartContext } from "../context/CartContext";
+import { useContext } from "react";
 
-function Cart({cart, removeFromCart, cartLength}){
+function Cart(){
+  const { cartCount, cart} = useContext(CartContext);
 
 const total = cart.reduce((sum, product) => {
     return sum + Number(product.price);
@@ -11,7 +14,7 @@ const total = cart.reduce((sum, product) => {
     if (cart.length === 0) {
     return (
       <section className="mx-auto bg-[#3e0000] h-screen text-center">
-        <Header cart={cartLength}/>
+        <Header/>
         <h1 className="text-3xl text-white font-bold"> Your Cart is Empty </h1>
         <p className="mt-3 text-gray-500"> You haven't added any products yet. </p>
         <Link to="/" className="mt-6 inline-block rounded-lg border border-white px-5 py-3 text-white hover:bg-white hover:text-[#3e0000]"> Continue Shopping </Link>
