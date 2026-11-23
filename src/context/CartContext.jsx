@@ -21,7 +21,7 @@ function CartProvider({ children }) {
   const cartCount = cart.length;
 
   const totalPrice = cart.reduce(
-    (sum, product) => sum + product.price,
+    (sum, product) => sum + Number(product.price),
     0
   );
 

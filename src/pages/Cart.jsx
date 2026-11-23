@@ -5,11 +5,7 @@ import { CartContext } from "../context/CartContext";
 import { useContext } from "react";
 
 function Cart(){
-  const { cartCount, cart} = useContext(CartContext);
-
-const total = cart.reduce((sum, product) => {
-    return sum + Number(product.price);
-  }, 0);
+  const { cartCount, cart, removeFromCart, totalPrice} = useContext(CartContext);
 
     if (cart.length === 0) {
     return (
@@ -27,12 +23,12 @@ const total = cart.reduce((sum, product) => {
             {cart.map(item => <ProductCard product={item} removeFromCart={removeFromCart}/>)}
           </div>
           <div className="mt-10 flex items-end px-10 justify-between border-t pt-6">
-            <span className="text-xl font-semibold">
-              Total:
-            </span>
-            <span className="text-2xl font-bold">
-              ${total.toFixed(3)}
-            </span>
+          <span className="text-xl font-semibold">
+            Total:
+          </span>
+          <span className="text-2xl font-bold">
+            ${totalPrice.toFixed(3)}
+          </span>
           </div>
         </div>
     )

@@ -23,7 +23,7 @@ function ProductCard ({product}) {
                         ):
                         <button onClick={(e) => {
                             e.preventDefault()
-                            onAddToCart(product)}} className="border border-white font-sm cursor-pointer rounded-2xl h-8 w-30">Add To Cart</button>
+                            addToCart(product)}} className="border border-white font-sm cursor-pointer rounded-2xl h-8 w-30">Add To Cart</button>
                         }
                     </div>
                 </div>
